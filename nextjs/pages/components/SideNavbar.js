@@ -14,6 +14,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -39,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
     },
   });
 
+  function ListItemLink(props) {
+    return <ListItem button component="a" {...props} />;
+  }
+
 export default function SideNavbar(){
 
     const classes = useStyles();
@@ -55,23 +60,29 @@ export default function SideNavbar(){
           aria-labelledby="nested-list-subheader"
           subheader={
             <ListSubheader component="div" id="nested-list-subheader">
-              Gnosis Analytics
+              Golf Stat App
             </ListSubheader>
           }
           className={classes.root}
         >
-          <ListItem button>
+          <ListItemLink href="/dashboard">
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
+            <ListItemText primary="Dashboard" />
+          </ListItemLink>
+          <ListItemLink href="/profile">
+          <ListItemIcon>
               <AccountBoxIcon />
             </ListItemIcon>
             <ListItemText primary="Profile" />
-          </ListItem>
+          </ListItemLink>
+          <ListItemLink href="/add">
+          <ListItemIcon>
+              <AddIcon />
+            </ListItemIcon>
+            <ListItemText primary="Add a round" />
+          </ListItemLink>
           <ListItem button onClick={handleClick}>
             <ListItemIcon>
               <SportsGolfIcon />

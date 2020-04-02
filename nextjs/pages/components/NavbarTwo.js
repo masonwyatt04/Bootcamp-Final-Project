@@ -122,21 +122,6 @@ export default function NavbarTwo(){
           <Typography className={classes.title} variant="h6" noWrap color="secondary">
             Golf Stat App
           </Typography>
-          <Typography className={classes.aboutUsLink}>
-          <Link href="/about" color='secondary'>
-            About Us
-          </Link>
-          </Typography>
-          <Typography className={classes.pricingLink}>
-          <Link href="/pricing" color='secondary'>
-            Pricing and Details
-          </Link>
-          </Typography>
-          <Typography className={classes.products}>
-          <Link href="/products" color='secondary'>
-            Products
-          </Link>
-          </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon color='secondary'/>

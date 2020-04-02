@@ -54,7 +54,7 @@ export default function signIn(){
                         <TextField id="outlined-basic" label="Email" variant="outlined" />  
                     </Grid>
                     <Grid>
-                        <TextField id="outlined-basic" label="Password" variant="outlined" />  
+                        <TextField variant="outlined" id="standard-password-input" label="Password" type="password" autoComplete="current-password"/>  
                     </Grid>
                     <Grid>
                         <Button variant="contained" color='primary'>Sign-In</Button>

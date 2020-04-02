@@ -8,8 +8,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import HandicapSlider from './components/HandicapSlider';
-
+import FairwaySlider from './FairwaySlider';
+import GreenSlider from './GreenSlider';
+import TournamentRoundSwitch from './TournamentRoundSwitch';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -19,6 +20,12 @@ const useStyles = makeStyles(theme => ({
       },
       grid: {
         flexGrow: 1,
+      },
+      udO: {
+        marginTop: theme.spacing(20),
+      },
+      udC: {
+        marginTop: theme.spacing(5),
       },
     },
   }));
@@ -37,34 +44,40 @@ const theme = createMuiTheme({
     },
   });
 
-export default function signUp(){
+export default function addRoundForm(){
 
     const classes = useStyles();
 
     return(
         <ThemeProvider theme={theme}>
-            <Container maxWidth='sm'>
+            <Container maxWidth='md'>
                 <Typography>
-                    Sign Up
+                    Add a Round
                 </Typography>
                 <Paper >
                 <div className={classes.root}>
                 <Grid container spacing={3}>
                 <form className={classes.root} noValidate autoComplete="off">
+                    <Grid>
+                        <TextField id="outlined-basic" label="Score" variant="outlined" />  
+                    </Grid>
                     <Grid item xs={12}>
-                        <TextField id="outlined-basic" label="First Name" variant="outlined" />  
+                        <FairwaySlider />
                     </Grid>
-                    <Grid>
-                        <TextField id="outlined-basic" label="Last Name" variant="outlined" />  
+                    <Grid item xs={12}>
+                        <GreenSlider />
                     </Grid>
-                    <Grid>
-                        <TextField id="outlined-basic" label="Email" variant="outlined" />  
+                    <Grid item xs={12}>
+                    <TextField id="outlined-basic" className={classes.udC} label="Up and Downs" variant="outlined" />
                     </Grid>
-                    <Grid>
-                        <TextField variant="outlined" id="standard-password-input" label="Password" type="password" autoComplete="current-password"/>  
+                    <Grid item xs={12}>
+                      <TextField id="outlined-basic" className={classes.udO} label="Up and Down Chances" variant="outlined" />  
                     </Grid>
-                    <Grid>
-                        <HandicapSlider />  
+                    <Grid item xs={12}>
+                      <TextField id="outlined-basic" className={classes.udO} label="Putts" variant="outlined" />  
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TournamentRoundSwitch /> 
                     </Grid>
                     <Grid>
                         <Button variant="contained" color='primary'>Submit</Button>

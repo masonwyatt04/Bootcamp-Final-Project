@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     },
   });
   
-export default function DashboardBar(){
+export default function AddBar(){
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -105,7 +105,7 @@ export default function DashboardBar(){
           <Toolbar>
 
             <Typography className={classes.title} variant="h6" noWrap>
-              Dashboard
+              Add a Round
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
