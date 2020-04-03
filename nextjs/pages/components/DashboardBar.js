@@ -1,16 +1,12 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -84,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     },
   });
   
-export default function DashboardBar(){
+export default function DashboardBar(props){
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -105,7 +101,7 @@ export default function DashboardBar(){
           <Toolbar>
 
             <Typography className={classes.title} variant="h6" noWrap>
-              Dashboard
+              {props.pagename}
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>

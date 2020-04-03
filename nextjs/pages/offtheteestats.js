@@ -3,7 +3,6 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import SideNavbar from './components/SideNavbar';
 import DashboardBar from './components/DashboardBar';
-import StatsCard from './components/StatsCard';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function Dashboard(){
+export default function OffTheTeeStats(){
 
 const classes = useStyles();
 
@@ -29,20 +28,9 @@ return(<>
       <Grid item xs={10}>
       <Grid container spacing={3}>
           <Grid item xs={12}>
-              <DashboardBar pagename='Dashboard'/>
+              <DashboardBar pagename='Off the Tee Stats'/>
           </Grid>
-          <Grid item xs={3}>
-              <StatsCard statname="Off the Tee Stats" />
-          </Grid>
-          <Grid item xs={3}>
-              <StatsCard statname="Approach Stats" />
-          </Grid> 
-          <Grid item xs={3}>
-              <StatsCard statname="Around the Green Stats"/>
-          </Grid>
-          <Grid item xs={3}>
-              <StatsCard statname="Putting Stats"/>
-          </Grid>
+
       </Grid>  
       </Grid>
 

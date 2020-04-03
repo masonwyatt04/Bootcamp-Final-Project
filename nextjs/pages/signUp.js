@@ -67,7 +67,7 @@ export default function signUp(){
                         <HandicapSlider />  
                     </Grid>
                     <Grid>
-                        <Button variant="contained" color='primary'>Submit</Button>
+                        <Button variant="contained" color='primary' href='/signIn'>Submit</Button>
                     </Grid>
                 </form>
                 </Grid>
