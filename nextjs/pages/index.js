@@ -44,7 +44,7 @@ export default function Index() {
       <Grid item xs={12}>
         <center>
         <Typography>
-          Welcome to a new way to look at your golf game.
+          An app for recording golf scores and looking at your stats.
         </Typography>
         <Button variant="contained" color="primary" href='/signUp'>
           Get Started
