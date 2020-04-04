@@ -44,15 +44,18 @@ export default function signUp(){
 
     const [ data, setData ] = useState();
 
-    useEffect(() => {
+      useEffect(() => {
 
-      fetch('/api/user')
-      .then( r => r.json() )
-      .then( data => {
-        setData(data);
-      });
+        fetch('/api/user', {
+          method: 'get'
+        })
+        .then( r => r.json() )
+        .then( data => {
+          setData(data[0].first_name);
+        });
+      
+      }, []);
     
-    }, []);
 
     return(
         <ThemeProvider theme={theme}>
