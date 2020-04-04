@@ -61,7 +61,7 @@ export default function signUp(){
         <ThemeProvider theme={theme}>
             <Container maxWidth='sm'>
                 <Typography>
-                    {JSON.stringify(data)}
+                    Sign Up
                 </Typography>
                 <Paper >
                 <div className={classes.root}>

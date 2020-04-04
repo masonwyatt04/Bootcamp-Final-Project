@@ -92,30 +92,30 @@ export default function SideNavbar(){
           </ListItem>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+              <ListItemLink href="/offtheteestats" button className={classes.nested}>
                 <ListItemIcon>
                   <StarBorder />
                 </ListItemIcon>
                 <ListItemText primary="Off The Tee" />
-              </ListItem>
-              <ListItem button className={classes.nested}>
+              </ListItemLink>
+              <ListItemLink href="/approachstats"button className={classes.nested}>
                 <ListItemIcon>
                   <StarBorder />
                 </ListItemIcon>
                 <ListItemText primary="Approach" />
-              </ListItem>
-              <ListItem button className={classes.nested}>
+              </ListItemLink>
+              <ListItemLink href="/aroundthegreenstats" button className={classes.nested}>
                 <ListItemIcon>
                   <StarBorder />
                 </ListItemIcon>
                 <ListItemText primary="Around The Green" />
-              </ListItem>
-              <ListItem button className={classes.nested}>
+              </ListItemLink>
+              <ListItemLink href="/puttingstats" button className={classes.nested}>
                 <ListItemIcon>
                   <StarBorder />
                 </ListItemIcon>
                 <ListItemText primary="Putting" />
-              </ListItem>
+              </ListItemLink>
             </List>
           </Collapse>
         </List>

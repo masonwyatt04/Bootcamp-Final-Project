@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import SideNavbar from './components/SideNavbar';
 import DashboardBar from './components/DashboardBar';
+import ProfileComponent from './components/ProfileComponent'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,9 +33,7 @@ return(<>
               <DashboardBar pagename='Profile'/>
           </Grid>
           <Grid item xs={10}>
-            <Typography>
-                Placeholder
-            </Typography>
+            <ProfileComponent />
           </Grid>
       </Grid>  
       </Grid>

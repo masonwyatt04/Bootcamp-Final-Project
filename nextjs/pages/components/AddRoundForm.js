@@ -80,7 +80,7 @@ export default function addRoundForm(){
                         <TournamentRoundSwitch /> 
                     </Grid>
                     <Grid>
-                        <Button variant="contained" color='primary'>Submit</Button>
+                        <Button variant="contained" color='primary' href='/dashboard'>Submit</Button>
                     </Grid>
                 </form>
                 </Grid>
