@@ -21,7 +21,7 @@ exports.create = (req, res) => {
     up_and_downs: req.body.up_and_downs,
     up_and_down_chances: req.body.up_and_down_chances,
     putts: req.body.putts,
-    tournament_round: req.body.tournament_round,
+    tournament_round: req.body.tournament_round
   };
 
   // Save a set of stats

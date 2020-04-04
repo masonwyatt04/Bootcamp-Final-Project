@@ -3,8 +3,8 @@ const Stats = require("../../../controllers/statsController");
 const handler = nextConnect();
 
 handler
-  .get(Stats.findAll)
-  .post(Stats.create)
-  .delete(Stats.deleteAll);
+  .get(Stats.findOne)
+  .put(Stats.update)
+  .delete(Stats.delete);
  
 export default handler;

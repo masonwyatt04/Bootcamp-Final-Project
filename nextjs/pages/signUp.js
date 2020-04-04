@@ -1,4 +1,5 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
+import fetch from 'isomorphic-unfetch'
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { Container } from '@material-ui/core';
@@ -41,11 +42,23 @@ export default function signUp(){
 
     const classes = useStyles();
 
+    const [ data, setData ] = useState();
+
+    useEffect(() => {
+
+      fetch('/api/user')
+      .then( r => r.json() )
+      .then( data => {
+        setData(data);
+      });
+    
+    }, []);
+
     return(
         <ThemeProvider theme={theme}>
             <Container maxWidth='sm'>
                 <Typography>
-                    Sign Up
+                    {JSON.stringify(data)}
                 </Typography>
                 <Paper >
                 <div className={classes.root}>
